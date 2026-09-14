@@ -1,7 +1,7 @@
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
-import { Skills } from './components/Skills'
+import { Languages, Skills } from './components/Skills'
 import { Experience } from './components/Experience'
 import { Projects } from './components/Projects'
 import { Education } from './components/Education'
@@ -14,11 +14,12 @@ import { useActiveSection } from './hooks/useActiveSection'
 const sectionIds = [
   'home',
   'about',
-  'skills',
+  'education',
   'experience',
   'projects',
-  'education',
-  'achievements',
+  'skills',
+  'certifications',
+  'languages',
   'contact',
 ]
 
@@ -30,13 +31,15 @@ function App() {
     <div className="min-h-screen bg-mist-100 text-navy-900 dark:bg-navy-900 dark:text-mist-100">
       <Navbar theme={theme} onToggleTheme={toggleTheme} activeSection={activeSection} />
       <main>
+        {/* Ali Nassef: recruiter-friendly section order. */}
         <Hero />
         <About />
-        <Skills />
+        <Education />
         <Experience />
         <Projects />
-        <Education />
+        <Skills />
         <Achievements />
+        <Languages />
         <Contact />
       </main>
       <Footer />

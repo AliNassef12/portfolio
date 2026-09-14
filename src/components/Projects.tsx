@@ -8,8 +8,8 @@ export function Projects() {
       <div className="section-container">
         <SectionHeading
           index="04"
-          title="Featured Projects"
-          description="A selection of web, database, and AI projects. Repository and demo links are added as projects are published."
+          title="Projects"
+          description="Selected full stack, database, software engineering, signal-processing, and AI projects."
         />
 
         <div className="grid gap-6 sm:grid-cols-2">

@@ -10,11 +10,12 @@ interface NavbarProps {
 
 const links = [
   { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
+  { href: '#education', label: 'Education' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
-  { href: '#education', label: 'Education' },
-  { href: '#achievements', label: 'Achievements' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#certifications', label: 'Training' },
+  { href: '#languages', label: 'Languages' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -31,7 +32,7 @@ export function Navbar({ theme, onToggleTheme, activeSection }: NavbarProps) {
           Ali Nassef
         </a>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-0.5 lg:flex">
           {links.map((link) => {
             const isActive = activeSection === link.href.slice(1)
             return (
@@ -56,7 +57,7 @@ export function Navbar({ theme, onToggleTheme, activeSection }: NavbarProps) {
           <ThemeToggle theme={theme} onToggle={onToggleTheme} />
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-navy-600/15 text-navy-700 dark:border-mist-300/15 dark:text-mist-200 md:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-navy-600/15 text-navy-700 dark:border-mist-300/15 dark:text-mist-200 lg:hidden"
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
             onClick={() => setOpen((prev) => !prev)}
@@ -67,7 +68,7 @@ export function Navbar({ theme, onToggleTheme, activeSection }: NavbarProps) {
       </nav>
 
       {open && (
-        <ul className="border-t border-navy-600/10 bg-mist-100 px-6 py-4 dark:border-mist-300/10 dark:bg-navy-900 md:hidden">
+        <ul className="border-t border-navy-600/10 bg-mist-100 px-6 py-4 dark:border-mist-300/10 dark:bg-navy-900 lg:hidden">
           {links.map((link) => (
             <li key={link.href}>
               <a

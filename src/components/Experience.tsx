@@ -5,7 +5,7 @@ export function Experience() {
   return (
     <section id="experience" className="border-t border-navy-600/10 py-20 dark:border-mist-300/10 sm:py-28">
       <div className="section-container">
-        <SectionHeading index="03" title="Experience" />
+        <SectionHeading index="03" title="Experience & Internships" />
 
         <ol className="space-y-8 border-l border-navy-600/15 pl-6 dark:border-mist-300/15">
           {experience.map((item) => (
@@ -27,6 +27,16 @@ export function Experience() {
               <p className="mt-2 text-sm leading-relaxed text-navy-700/85 dark:text-mist-200/80">
                 {item.summary}
               </p>
+              {item.bullets && (
+                <ul className="mt-3 space-y-1.5">
+                  {item.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-2 text-sm leading-relaxed text-navy-700/75 dark:text-mist-200/70">
+                      <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent-500" aria-hidden="true" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ol>

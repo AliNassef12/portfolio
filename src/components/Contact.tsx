@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react'
+import { ExternalLink, Github, Mail, MessageCircle, Phone } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
 import { profile } from '../data/profile'
 
@@ -7,8 +7,8 @@ export function Contact() {
     <section id="contact" className="border-t border-navy-600/10 py-20 dark:border-mist-300/10 sm:py-28">
       <div className="section-container">
         <SectionHeading
-          index="07"
-          title="Get In Touch"
+          index="08"
+          title="Contact"
           description="I'm open to internship, freelance, and junior developer opportunities. Feel free to reach out."
         />
 
@@ -21,6 +21,24 @@ export function Contact() {
             {profile.email}
           </a>
           <a
+            href={`tel:${profile.phone}`}
+            aria-label={`Call Ali Mohamed Nassef at ${profile.phone}`}
+            className="inline-flex items-center gap-2 rounded-lg border border-navy-600/20 px-5 py-3 text-sm font-semibold text-navy-800 transition-colors hover:border-accent-500/40 hover:text-accent-500 dark:border-mist-300/20 dark:text-mist-100 dark:hover:text-accent-400"
+          >
+            <Phone size={16} />
+            {profile.phone}
+          </a>
+          <a
+            href={profile.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Chat with Ali Mohamed Nassef on WhatsApp"
+            className="inline-flex items-center gap-2 rounded-lg border border-navy-600/20 px-5 py-3 text-sm font-semibold text-navy-800 transition-colors hover:border-accent-500/40 hover:text-accent-500 dark:border-mist-300/20 dark:text-mist-100 dark:hover:text-accent-400"
+          >
+            <MessageCircle size={16} />
+            WhatsApp
+          </a>
+          <a
             href={profile.github}
             target="_blank"
             rel="noreferrer"
@@ -30,13 +48,14 @@ export function Contact() {
             GitHub
           </a>
           <a
-            href={profile.linkedin}
+            href={profile.portfolio}
             target="_blank"
             rel="noreferrer"
+            aria-label="Open Ali Mohamed Nassef's portfolio"
             className="inline-flex items-center gap-2 rounded-lg border border-navy-600/20 px-5 py-3 text-sm font-semibold text-navy-800 transition-colors hover:border-accent-500/40 hover:text-accent-500 dark:border-mist-300/20 dark:text-mist-100 dark:hover:text-accent-400"
           >
-            <Linkedin size={16} />
-            LinkedIn
+            <ExternalLink size={16} />
+            Portfolio
           </a>
         </div>
       </div>

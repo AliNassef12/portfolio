@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin } from 'lucide-react'
+import { ArrowRight, Download, ExternalLink, Github, Mail } from 'lucide-react'
 import { profile } from '../data/profile'
 
 const barHeights = [30, 55, 40, 70, 45, 85, 50, 65, 35, 60, 42, 75]
@@ -49,7 +49,7 @@ export function Hero() {
                 href="#projects"
                 className="group inline-flex items-center gap-2 rounded-lg bg-accent-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-600"
               >
-                View My Projects
+                View Projects
                 <ArrowRight
                   size={16}
                   className="transition-transform group-hover:translate-x-0.5"
@@ -63,6 +63,9 @@ export function Hero() {
                 <Download size={16} />
                 Download CV
               </a>
+              <a href="#contact" className="inline-flex items-center gap-2 rounded-lg border border-navy-600/20 px-5 py-3 text-sm font-semibold text-navy-800 transition-colors hover:border-accent-500/40 hover:text-accent-500 dark:border-mist-300/20 dark:text-mist-100 dark:hover:text-accent-400">
+                <Mail size={16} /> Contact Me
+              </a>
             </div>
 
             <div className="mt-8 flex items-center gap-4">
@@ -70,19 +73,19 @@ export function Hero() {
                 href={profile.github}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="GitHub profile"
+                aria-label="Visit Ali Mohamed Nassef on GitHub"
                 className="text-navy-700/70 transition-colors hover:text-accent-500 dark:text-mist-200/60 dark:hover:text-accent-400"
               >
                 <Github size={20} />
               </a>
               <a
-                href={profile.linkedin}
+                href={profile.portfolio}
                 target="_blank"
                 rel="noreferrer"
-                aria-label="LinkedIn profile"
+                aria-label="Visit Ali Mohamed Nassef's portfolio"
                 className="text-navy-700/70 transition-colors hover:text-accent-500 dark:text-mist-200/60 dark:hover:text-accent-400"
               >
-                <Linkedin size={20} />
+                <ExternalLink size={20} />
               </a>
             </div>
           </motion.div>
@@ -97,7 +100,7 @@ export function Hero() {
             <div className="relative overflow-hidden rounded-2xl border border-navy-600/15 dark:border-mist-300/15">
               <img
                 src={`${import.meta.env.BASE_URL}images/ali-nassef.png`}
-                alt={`Portrait of ${profile.name}`}
+                alt="Ali Mohamed Nassef, Full Stack Developer"
                 className="aspect-[3/4] w-full object-cover"
                 width={480}
                 height={640}
