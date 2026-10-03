@@ -7,7 +7,7 @@ export function Projects() {
     <section id="projects" className="border-t border-navy-600/10 py-20 dark:border-mist-300/10 sm:py-28">
       <div className="section-container">
         <SectionHeading
-          index="04"
+          index="06"
           title="Projects"
           description="Selected full stack, database, software engineering, signal-processing, and AI projects."
         />

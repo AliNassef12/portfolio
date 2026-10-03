@@ -19,6 +19,9 @@ export function About() {
             software engineering and complete web application development, using Git and GitHub
             alongside practical debugging, problem solving, and API integration.
           </p>
+          <p className="mt-6 text-lg leading-relaxed text-navy-900 dark:text-mist-100">
+            <strong className="font-bold">Turning Your Vision into Intelligent Digital Experiences</strong>
+          </p>
         </div>
       </div>
     </section>

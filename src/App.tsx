@@ -15,10 +15,10 @@ const sectionIds = [
   'home',
   'about',
   'education',
+  'certifications',
+  'skills',
   'experience',
   'projects',
-  'skills',
-  'certifications',
   'languages',
   'contact',
 ]
@@ -35,10 +35,10 @@ function App() {
         <Hero />
         <About />
         <Education />
+        <Achievements />
+        <Skills />
         <Experience />
         <Projects />
-        <Skills />
-        <Achievements />
         <Languages />
         <Contact />
       </main>

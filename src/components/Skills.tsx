@@ -5,7 +5,7 @@ export function Skills() {
   return (
     <section id="skills" className="border-t border-navy-600/10 py-20 dark:border-mist-300/10 sm:py-28">
       <div className="section-container">
-        <SectionHeading index="05" title="Technical Skills" />
+        <SectionHeading index="04" title="Technical Skills" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
             <div key={group.category} className="rounded-xl border border-navy-600/10 bg-white/60 p-5 dark:border-mist-300/10 dark:bg-navy-800/60">
