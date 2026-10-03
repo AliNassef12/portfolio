@@ -99,7 +99,7 @@ export function Hero() {
             <div className="absolute -inset-3 rounded-2xl bg-gradient-to-br from-accent-500/20 via-transparent to-accent-400/10 blur-xl" aria-hidden="true" />
             <div className="relative overflow-hidden rounded-2xl border border-navy-600/15 dark:border-mist-300/15">
               <img
-                src={`${import.meta.env.BASE_URL}images/ali-nassef.png`}
+                src={`${import.meta.env.BASE_URL}images/ali-nassef-2026.png`}
                 alt="Ali Mohamed Nassef, Full Stack Developer"
                 className="aspect-[3/4] w-full object-cover"
                 width={480}
