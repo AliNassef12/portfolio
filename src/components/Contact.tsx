@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Mail, MessageCircle, Phone } from 'lucide-react'
+import { ExternalLink, Github, Linkedin, Mail, MessageCircle, Phone } from 'lucide-react'
 import { SectionHeading } from './SectionHeading'
 import { profile } from '../data/profile'
 
@@ -46,6 +46,16 @@ export function Contact() {
           >
             <Github size={16} />
             GitHub
+          </a>
+          <a
+            href={profile.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Connect with Ali Mohamed Nassef on LinkedIn"
+            className="inline-flex items-center gap-2 rounded-lg border border-navy-600/20 px-5 py-3 text-sm font-semibold text-navy-800 transition-colors hover:border-accent-500/40 hover:text-accent-500 dark:border-mist-300/20 dark:text-mist-100 dark:hover:text-accent-400"
+          >
+            <Linkedin size={16} />
+            LinkedIn
           </a>
           <a
             href={profile.portfolio}
